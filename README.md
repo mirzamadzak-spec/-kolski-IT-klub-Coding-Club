@@ -1,1 +1,1 @@
-# -kolski-IT-klub-Coding-Club
+Skolski-IT-klub-Coding-Club
