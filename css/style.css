@@ -116,3 +116,21 @@ a { color: inherit; }
 /* ===== 8. Footer ===== */
 .site-footer { border-top: 2px solid var(--ink); padding: 24px; text-align: center; color: var(--muted); background: var(--paper); }
 .site-footer p { margin: 0; }
+/* ===== 9. Responzivnost ===== */
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; padding: 48px 20px; gap: 32px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .nav-toggle { display: block; }
+  .nav {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--paper); border-bottom: 2px solid var(--ink);
+  }
+  .nav.open { display: flex; }
+  .nav a { padding: 14px 24px; }
+  .section { padding: 48px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cursor { animation: none; }
+  .btn { transition: none; }
+}
