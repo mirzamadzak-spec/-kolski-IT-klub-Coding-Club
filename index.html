@@ -3,83 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Školski IT Klub | Coding Club</title>
+    <title>Školski IT klub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">IT<span>Klub</span></div>
+    <!-- Navigacija -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo"><span class="code-icon">{ / }</span> Školski IT klub</a>
             <ul class="nav-links">
-                <li><a href="#pocetna">Početna</a></li>
+                <li><a href="#pocetna" class="active">Početna</a></li>
                 <li><a href="#onama">O nama</a></li>
                 <li><a href="#projekti">Projekti</a></li>
-                <li><a href="#kontakt">Prijavi se</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
+
+    <!-- Hero sekcija -->
     <section id="pocetna" class="hero">
-        <div class="hero-content">
-            <h1>Dobro došli u Školski IT Klub</h1>
-            <p>Mjesto gdje učimo programiranje, web dizajn, robotiku i gradimo projekte budućnosti.</p>
-            <a href="#kontakt" class="btn">Pridruži nam se</a>
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <span class="badge-top">UČIMO. STVARAMO. DIJELIMO.</span>
+                <h1>DOBRO DOŠLI U<br>ŠKOLSKI IT KLUB</h1>
+                <p class="hero-sub">Mjesto za programere i inovatore</p>
+                <div class="hero-cta">
+                    <a href="#kontakt" class="btn-primary">Prijavi se odmah!</a>
+                    <span class="cta-note">Tvoja radoznalost je jedini preduslov.</span>
+                </div>
+            </div>
+            <div class="hero-card">
+                <span class="card-tag">ZA SVE NIVOE ZNANJA</span>
+                <h3>Tvoja ideja.<br>Naš sljedeći projekt.</h3>
+                <hr>
+                <p class="card-topics">Programiranje &nbsp;/&nbsp; Dizajn &nbsp;/&nbsp; Robotika</p>
+            </div>
         </div>
     </section>
+
+    <!-- O nama / Članovi -->
     <section id="onama" class="section">
-        <h2>O nama i članovi</h2>
-        <p class="section-desc">Mi smo grupa entuzijasta iz 4. razreda IT smjera koji zajedno istražuju moderne tehnologije.</p>
-        <div class="grid-container">
-            <div class="card">
-                <div class="avatar">AM</div>
-                <h3>Amir M.</h3>
-                <p>Frontend Developer & UI/UX dizajner</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>O NAMA / ČLANOVI</h2>
+                <p>Zajedno učimo i pretvaramo ideje u stvarnost.</p>
             </div>
-            <div class="card">
-                <div class="avatar">SL</div>
-                <h3>Sara L.</h3>
-                <p>Backend & Baze podataka</p>
-            </div>
-            <div class="card">
-                <div class="avatar">TK</div>
-                <h3>Tarik K.</h3>
-                <p>Algoritmi & Python programiranje</p>
-            </div>
-        </div>
-    </section>
-    <section id="projekti" class="section bg-light">
-        <h2>Naši projekti</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h3>Školski e-Dnevnik Bot</h3>
-                <p>Automatski podsjetnik za kontrolne radove i zadaće napravljen u Pythonu.</p>
-            </div>
-            <div class="card">
-                <h3>Web stranica škole</h3>
-                <p>Moderan redizajn zvanične stranice naše gimnazije.</p>
-            </div>
-            <div class="card">
-                <h3>Pametna učionica</h3>
-                <p>Arduino sistem za automatsko praćenje temperature i rasvjete.</p>
+            <div class="members-grid">
+                <div class="member-card">
+                    <div class="avatar-circle">AH</div>
+                    <div class="member-info">
+                        <h3>Amar Hadžić</h3>
+                        <span class="role">PROGRAMIRANJE</span>
+                        <p>Volim praviti web aplikacije i dijeliti znanje s ekipom. Trenutno istražujem Python.</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <div class="avatar-circle">LD</div>
+                    <div class="member-info">
+                        <h3>Lejla Delić</h3>
+                        <span class="role">DIZAJN I ROBOTIKA</span>
+                        <p>Spajam kreativnost i tehnologiju kroz dizajn i male robotske projekte.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="kontakt" class="section">
-        <h2>Prijavi se u klub</h2>
-        <form id="prijavaForma" class="contact-form">
-            <input type="text" id="ime" placeholder="Tvoje ime i prezime">
-            <input type="email" id="email" placeholder="Tvoj email">
-            <textarea id="poruka" rows="4" placeholder="Zašto želiš postati član IT kluba?"></textarea>
-            <button type="submit" class="btn">Pošalji prijavu</button>
-            <p id="formPoruka" class="form-feedback"></p>
-        </form>
+    <!-- Projekti -->
+    <section id="projekti" class="section bg-soft">
+        <div class="container">
+            <div class="section-header">
+                <h2>PROJEKTI</h2>
+                <p>Male ideje. Stvarna rješenja.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="num-badge">01</span>
+                        <h3>Školska web stranica</h3>
+                    </div>
+                    <p>Sve školske novosti, događaji i obavijesti na jednom mjestu.</p>
+                    <div class="project-footer">
+                        <span>HTML / CSS / JavaScript</span>
+                        <span>↗</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="num-badge">02</span>
+                        <h3>Pametna učionica</h3>
+                    </div>
+                    <p>Pratimo temperaturu i kvalitet zraka pomoću senzora i mikrokontrolera.</p>
+                    <div class="project-footer">
+                        <span>Arduino / Senzori</span>
+                        <span>↗</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="num-badge">03</span>
+                        <h3>Kviz znanja</h3>
+                    </div>
+                    <p>Interaktivni kviz za učenje kroz igru i prijateljsko takmičenje.</p>
+                    <div class="project-footer">
+                        <span>Python / Pygame</span>
+                        <span>↗</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Kontakt -->
+    <section id="kontakt" class="section bg-blue-tint">
+        <div class="container contact-grid">
+            <div class="contact-left">
+                <span class="section-label">KONTAKT</span>
+                <h2>Imaš ideju ili pitanje?</h2>
+                <p>Javi nam se i postani dio naše IT ekipe. Radujemo se tvojoj poruci!</p>
+                <p class="contact-highlight">Svaka velika ideja počinje razgovorom.</p>
+            </div>
+            <form id="prijavaForma" class="contact-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="ime">Ime i prezime</label>
+                        <input type="text" id="ime" placeholder="Unesi ime i prezime">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email adresa</label>
+                        <input type="email" id="email" placeholder="ime@primjer.ba">
+                    </div>
+                </div>
+                <div class="form-bottom">
+                    <div class="input-group full">
+                        <label for="poruka">Poruka</label>
+                        <textarea id="poruka" rows="3" placeholder="Napiši svoju poruku..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Pošalji</button>
+                </div>
+                <small>Tvoji podaci služe samo za odgovor na poruku.</small>
+                <p id="formPoruka" class="form-feedback"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Školski IT Klub | Softversko inženjerstvo</p>
+        <div class="container footer-container">
+            <strong>Školski IT klub</strong>
+            <span>Zajedno gradimo digitalnu budućnost.</span>
+        </div>
     </footer>
-
 
     <script src="script.js"></script>
 </body>
