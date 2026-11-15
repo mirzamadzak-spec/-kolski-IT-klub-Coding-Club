@@ -1,0 +1,45 @@
+/* ===== 1. Osnova i boje ===== */
+:root {
+  --paper: #f5f7fa;
+  --grid: #dde5f0;
+  --ink: #14213d;
+  --muted: #55657f;
+  --blue: #2f5bff;
+  --highlight: #ffd83d;
+  --white: #ffffff;
+  --radius: 10px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+h1, h2, h3, .logo { font-family: "Bricolage Grotesque", system-ui, sans-serif; line-height: 1.1; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+
+/* ===== 2. Navigacija ===== */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 24px;
+  background: var(--paper);
+  border-bottom: 2px solid var(--ink);
+}
+.logo { font-weight: 800; font-size: 1.3rem; text-decoration: none; }
+.nav { display: flex; gap: 24px; }
+.nav a { text-decoration: none; font-weight: 500; padding: 4px 0; }
+.nav a:hover { box-shadow: inset 0 -8px 0 var(--highlight); }
+.nav-toggle {
+  display: none; font: inherit; font-weight: 500;
+  background: var(--ink); color: var(--white);
+  border: 0; border-radius: var(--radius); padding: 8px 14px; cursor: pointer;
+}
