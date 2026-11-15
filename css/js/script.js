@@ -53,4 +53,36 @@ filterButtons.forEach(btn => {
     });
   });
 });
-v
+// ===== 4. Validacija forme =====
+const form = document.getElementById("signup-form");
+const success = document.getElementById("form-success");
+
+function setError(id, message) {
+  const field = document.getElementById(id);
+  document.getElementById(id + "-error").textContent = message;
+  field.classList.toggle("invalid", message !== "");
+  return message === "";
+}
+
+function validate() {
+  const ime = form.ime.value.trim();
+  const email = form.email.value.trim();
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  const results = [
+    setError("ime", ime.split(/\s+/).length >= 2 ? "" : "Upiši ime i prezime."),
+    setError("email", emailOk ? "" : "Upiši ispravnu email adresu, npr. ime@skola.ba."),
+    setError("razred", form.razred.value ? "" : "Izaberi razred."),
+    setError("poruka", form.poruka.value.trim().length >= 10 ? "" : "Napiši barem 10 znakova."),
+  ];
+  return results.every(Boolean);
+}
+
+form.addEventListener("submit", event => {
+  event.preventDefault();
+  success.textContent = "";
+  if (validate()) {
+    success.textContent = "Prijava je poslana. Javit ćemo ti se uskoro.";
+    form.reset();
+  }
+});
